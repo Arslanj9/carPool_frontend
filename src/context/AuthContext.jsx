@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
   // Function to handle login
   const login = async (name, password) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/users/login', { name, password, });
+      const response = await axios.post('https://carpoolserver-backend.onrender.com/api/users/login', { name, password, });
       console.log("Login response for user:", response.data.user); // Log response data
 
       setIsLoggedIn(true);

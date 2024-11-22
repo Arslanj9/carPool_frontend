@@ -89,7 +89,7 @@ const HostDetails = ({ user, onClose }) => {
 
 
     try {
-      const response = await axios.post('http://localhost:5000/api/request/byCommuter', requestData, {
+      const response = await axios.post('https://carpoolserver-backend.onrender.com/api/request/byCommuter', requestData, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -126,7 +126,7 @@ const HostDetails = ({ user, onClose }) => {
         <div className="flex space-x-4">
           <img
             className="w-16 h-16 rounded-full sm:w-24 sm:h-24"
-            src={`http://localhost:5000${user.profilePic}`} // Use the profilePic path
+            src={`https://carpoolserver-backend.onrender.com${user.profilePic}`} // Use the profilePic path
             alt={`${user.name} profile`}
           />
           <div className="flex flex-col justify-center">
@@ -206,7 +206,7 @@ const HostDetails = ({ user, onClose }) => {
             {user.vehicle.images.map((image, index) => (
               <img
                 key={index}
-                src={`http://localhost:5000/${image}`} // Add the server URL prefix if necessary
+                src={`https://carpoolserver-backend.onrender.com/${image}`} // Add the server URL prefix if necessary
                 alt={`vehicle-${index}`}
                 className="rounded-lg w-full h-auto cursor-pointer"
                 onClick={() => setSelectedImage(image)} // Assuming setSelectedImage is defined

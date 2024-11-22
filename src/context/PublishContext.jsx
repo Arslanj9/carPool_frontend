@@ -19,7 +19,7 @@ export const PublishProvider = ({ children }) => {
       
       if (storedUserId) {
         try {
-          const response = await axios.post('http://localhost:5000/api/users/vehicles', {
+          const response = await axios.post('https://carpoolserver-backend.onrender.com/api/users/vehicles', {
             userId: storedUserId, // Send userId in the request body
           });
           setVehicles(response.data); // Set vehicles array from response
@@ -55,7 +55,7 @@ const publishByHost = async (rideData) => {
       remainingAvailableSeats: rideData.remainingAvailableSeats
     };
 
-    const response = await axios.post('http://localhost:5000/api/publish/host', filteredData);
+    const response = await axios.post('https://carpoolserver-backend.onrender.com/api/publish/host', filteredData);
     setRides([...rides, response.data]);
     setSuccessMessage(response.data.message); 
     setLoading(false);
@@ -89,7 +89,7 @@ const publishByCommuter = async (rideData) => {
 
     console.log(`Date is: ${filteredData.departureDate}`)
 
-    const response = await axios.post('http://localhost:5000/api/publish/commuter', filteredData);
+    const response = await axios.post('https://carpoolserver-backend.onrender.com/api/publish/commuter', filteredData);
     setRides([...rides, response.data]);
     setLoading(false);
     setSuccessMessage(response.data.message); 

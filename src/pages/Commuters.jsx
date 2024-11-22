@@ -14,7 +14,7 @@ const Commuters = () => {
     const fetchCommuterData = async () => {
       try {
         // Fetch publishes
-        const publishResponse = await axios.get("http://localhost:5000/api/publish/getCommuter");
+        const publishResponse = await axios.get("https://carpoolserver-backend.onrender.com/api/publish/getCommuter");
         const publishData = publishResponse.data;
   
   
@@ -22,7 +22,7 @@ const Commuters = () => {
         const commuterDetailsPromises = publishData.map(async (commuter) => {
           try {
             // Fetch commuter (user) details
-            const userResponse = await axios.post("http://localhost:5000/api/users/getUserData", {
+            const userResponse = await axios.post("https://carpoolserver-backend.onrender.com/api/users/getUserData", {
               userId: commuter.publisherId,
             });
             const userData = userResponse.data;

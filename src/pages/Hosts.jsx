@@ -14,21 +14,21 @@ const Hosts = () => {
   useEffect(() => {
     const fetchHostsData = async () => {
       try {
-        const publishResponse = await axios.get('http://localhost:5000/api/publish/getHost');
+        const publishResponse = await axios.get('https://carpoolserver-backend.onrender.com/api/publish/getHost');
         const publishData = publishResponse.data;
 
         
 
         // Fetch user details and vehicles for each publish entry
         const hostDetailsPromises = publishData.map(async (publish) => {
-          const userResponse = await axios.post('http://localhost:5000/api/users/getUserData', {
+          const userResponse = await axios.post('https://carpoolserver-backend.onrender.com/api/users/getUserData', {
             userId: publish.publisherId,
           });
           const userData = userResponse.data;
 
 
           // Fetch vehicle details
-          const vehicleResponse = await axios.post('http://localhost:5000/api/users/getVehicle', {
+          const vehicleResponse = await axios.post('https://carpoolserver-backend.onrender.com/api/users/getVehicle', {
             vehicleId: publish.hostFields.vehicleId,
           });
           const vehicleData = vehicleResponse.data;

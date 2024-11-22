@@ -31,7 +31,7 @@ const HostCard = ({
         <div className="flex flex-col justify-center basis-2/3 p-4 flex-grow">
           <div className="flex gap-2 mb-1 sm:gap-3">
 
-            <img className="w-10 h-10 rounded-full sm:w-12 sm:h-12" src={`http://localhost:5000${profilePic}`} alt={`${name} profile`} />
+            <img className="w-10 h-10 rounded-full sm:w-12 sm:h-12" src={`https://carpoolserver-backend.onrender.com${profilePic}`} alt={`${name} profile`} />
             <div className="flex flex-col justify-center">
               <p className="text-gray-400 leading-none mb-[0.18rem]">{name}</p>
               <div className="flex gap-1 items-center">

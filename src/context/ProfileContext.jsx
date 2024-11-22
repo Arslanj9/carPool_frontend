@@ -15,7 +15,7 @@ export const ProfileProvider = ({ children }) => {
                 const userId = localStorage.getItem('userId');
                 if (!userId) return;
 
-                const response = await axios.post('http://localhost:5000/api/users/getUserData', { userId });
+                const response = await axios.post('https://carpoolserver-backend.onrender.com/api/users/getUserData', { userId });
                 setUserData(response.data);
 
                 console.log(`Role of user is: ${JSON.stringify(response.data.userRole)}`)

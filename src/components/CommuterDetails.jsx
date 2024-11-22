@@ -31,7 +31,7 @@ const CommuterDetails = ({ commuter, onClose }) => {
 
         <div className="flex space-x-4">
           {/* Profile Picture */}
-          <img className="w-16 h-16 rounded-full sm:w-24 sm:h-24" src={`http://localhost:5000${commuter.profilePic}`} alt="profile pic" />
+          <img className="w-16 h-16 rounded-full sm:w-24 sm:h-24" src={`https://carpoolserver-backend.onrender.com${commuter.profilePic}`} alt="profile pic" />
 
           {/* Name and Rating */}
           <div className="flex flex-col justify-center">

@@ -65,6 +65,9 @@ const Hosts = () => {
         });
 
         const publishesWithUserData = await Promise.all(hostDetailsPromises);
+
+        console.log(`Inside Hosts.jsx, publishedWithUSerData is: ${publishesWithUserData}`)
+
         setPublishesData(publishesWithUserData);
       } catch (error) {
         console.error('Error fetching hosts data:', error);

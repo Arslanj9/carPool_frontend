@@ -66,7 +66,7 @@ const Hosts = () => {
 
         const publishesWithUserData = await Promise.all(hostDetailsPromises);
 
-        console.log(`Inside Hosts.jsx, publishedWithUSerData is: ${publishesWithUserData}`)
+        console.log(`Inside Hosts.jsx, publishedWithUSerData is: ${JSON.stringify(publishesWithUserData)}`)
 
         setPublishesData(publishesWithUserData);
       } catch (error) {

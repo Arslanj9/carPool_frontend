@@ -63,12 +63,13 @@ const CommuterDetails = ({ commuter, onClose }) => {
         {/* Location Section */}
         <div className="w-full border rounded-lg p-4 text-center">
           <div>
-            <h1 className="text-sm">
-              <span className="mr-1 text-sky-600">{commuter.fromLocation}</span> to
+            <h1 className="text-lg">
+              <span className="mr-1 text-sky-600">{commuter.fromLocation}</span>
+              to
               <span className="ml-1 text-sky-600">{commuter.toLocation}</span>
             </h1>
-            <p className="text-xs">
-              {commuter.departureTime} <span className="text-[0.6rem] text-gray-500 pl-1">{commuter.departureDate}</span>
+            <p className="text-lg">
+              {commuter.departureTime} <span className="text-base text-gray-400 pl-1">{commuter.departureDate}</span>
             </p>
           </div>
         </div>

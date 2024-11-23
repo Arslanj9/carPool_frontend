@@ -6,6 +6,7 @@ import CommuterDetails from '../components/CommuterDetails';
 const Commuters = () => {
 
   const [commuterData, setCommuterData] = useState([]);
+  const [loading, setLoading] = useState(true); 
   const [selectedCommuter, setSelectedCommuter] = useState(null);
 
 
@@ -13,7 +14,7 @@ const Commuters = () => {
   useEffect(() => {
     const fetchCommuterData = async () => {
       try {
-        // Fetch publishes
+        setLoading(true);
         const publishResponse = await axios.get("https://carpoolserver-backend.onrender.com/api/publish/getCommuter");
         const publishData = publishResponse.data;
   
@@ -56,6 +57,8 @@ const Commuters = () => {
         setCommuterData(commutersWithUserData);
       } catch (error) {
         console.error("Error fetching commuter data:", error);
+      } finally {
+        setLoading(false);
       }
     };
   
@@ -73,6 +76,8 @@ const Commuters = () => {
     setSelectedCommuter(null); // Close the details view
   };
 
+
+  if (loading) return <p className='text-center mt-20'>Loading...</p>;
 
 
   return (

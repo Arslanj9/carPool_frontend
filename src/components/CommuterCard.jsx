@@ -21,10 +21,11 @@ const CommuterCard = ({
         <div className="flex sm:flex-row sm:justify-around flex-col justify-center px-4 py-4 flex-grow">
           {/* User Container */}
           <div className="flex gap-3">
+
             <img className="w-12 h-12 rounded-full" src={`https://carpoolserver-backend.onrender.com${profilePic}`} alt={`${name} profile`} />
             {/* UserName & Ratings */}
             <div className="flex flex-col justify-center">
-              <p className="text-gray-400 leading-none text-base mb-[0.18rem]">{name}</p>
+              <p className="text-gray-100 leading-none text-base mb-[0.18rem]">{name}</p>
               <div className="flex gap-1 items-center">
                 <IoMdStar className="text-xs" style={{ fill: "yellow" }} />
                 <p className="text-sm text-gray-500 leading-none">

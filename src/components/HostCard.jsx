@@ -33,29 +33,30 @@ const HostCard = ({
 
             <img className="w-10 h-10 rounded-full sm:w-12 sm:h-12" src={`https://carpoolserver-backend.onrender.com${profilePic}`} alt={`${name} profile`} />
             <div className="flex flex-col justify-center">
-              <p className="text-gray-400 leading-none mb-[0.18rem]">{name}</p>
+              <p className="text-gray-100 leading-none text-base mb-[0.18rem]">{name}</p>
               <div className="flex gap-1 items-center">
                 <IoMdStar className="text-xs" style={{ fill: "yellow" }} />
-                <p className="text-xs text-gray-500 leading-none" style={{ fontSize: "0.65rem" }}>
+                <p className="text-sm text-gray-500 leading-none" style={{ fontSize: "0.65rem" }}>
                   {rating} - {reviews} ratings
                 </p>
               </div>
             </div>
           </div>
           <div>
-            <h1 className="text-xs sm:text-sm mt-2">
-              <span className="mr-1 text-sky-600">{fromLocation}</span> to
+            <h1 className="text-base sm:text-sm mt-2">
+              <span className="mr-1 text-sky-600">{fromLocation}</span>
+                to
               <span className="ml-1 text-sky-600">{toLocation}</span>
             </h1>
-            <p className="text-xs">
+            <p className="text-base">
               {departureTime} <span className="text-[0.6rem] text-gray-500 pl-1">{departureDate}</span>
             </p>
           </div>
         </div>
         <div className="basis-1/3 p-4 flex flex-col justify-center">
-          <h3 className="text-sm font-semibold leading-none">
-            <span className="mr-1 text-sky-600">${price}</span>
-            <span className="text-[0.6rem] text-gray-500">/pas</span>
+          <h3 className="text-base font-semibold leading-none">
+            <span className="mr-1 text-sky-600">Rs.{price}</span>
+            <span className="text-xs text-gray-500">/pas</span>
           </h3>
 
           {/* Seats Information */}

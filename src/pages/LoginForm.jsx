@@ -50,8 +50,8 @@ function LoginForm() {
 
 
   return (
-    <div className="flex items-center justify-center mt-3 sm:mt-16 bg-[#13162e] z-2">
-      <div className="w-full max-w-md p-8 space-y-6 bg-[#21243D] bg-opacity-40 rounded-lg shadow-lg">
+    <div className="flex p-4 items-center justify-center mt-3 sm:mt-16 bg-[#13162e] z-2">
+      <div className="w-full max-w-md p-3 space-y-6 bg-[#21243D] bg-opacity-40 rounded-lg shadow-lg">
         <h2 className="text-3xl font-semibold text-center bg-transparent">Login</h2>
         <form onSubmit={handleSubmit} className="mt-8 space-y-6 bg-transparent">
 

@@ -76,7 +76,7 @@ const Commuters = () => {
 
 
   return (
-    <div className="p-1 sm:p-6 max-w-lg mx-auto">
+    <div className="p-3 sm:p-6 max-w-lg mx-auto">
       {selectedCommuter ? (
         <CommuterDetails commuter={selectedCommuter} onClose={handleCloseDetails} />
       ) : (

@@ -253,6 +253,9 @@ const HostDetails = ({ user, onClose }) => {
           ))}
         </div>
 
+
+        
+{/* 
         <button onClick={togglePopup} className="w-full py-2 text-white bg-blue-700 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
           Request a ride
         </button>
@@ -291,7 +294,7 @@ const HostDetails = ({ user, onClose }) => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </>
   );

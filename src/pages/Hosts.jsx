@@ -22,14 +22,14 @@ const Hosts = () => {
         // Fetch user details and vehicles for each publish entry
         const hostDetailsPromises = publishData.map(async (publish) => {
 
-          console.log(`Inside Hosts, publish is: ${publish}`)
-          
+          console.log(`Inside Hosts, publish is: ${JSON.stringify(publish)}`)
+
           const userResponse = await axios.post('https://carpoolserver-backend.onrender.com/api/users/getUserData', {
             userId: publish.publisherId,
           });
           const userData = userResponse.data;
 
-          console.log(`Inside Hosts, User Data is: ${userData}`)
+          console.log(`Inside Hosts, User Data is: ${JSON.stringify(userData)}`)
 
 
           // Fetch vehicle details

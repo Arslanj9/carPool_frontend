@@ -36,11 +36,12 @@ const CommuterCard = ({
           {/* Location Container */}
           <div className="flex flex-col justify-center mt-3 sm:mt-0">
             <h1 className="text-base">
-              <span className="mr-1 text-sky-600">{fromLocation}</span> to
+              <span className="mr-1 text-sky-600">{fromLocation}</span>
+                to
               <span className="ml-1 text-sky-600">{toLocation}</span>
             </h1>
             <p className="text-base">
-              {departureTime} <span className="text-sm text-gray-300 pl-1">{departureDate}</span>
+              {departureTime} <span className="text-sm text-gray-400 pl-1">{departureDate}</span>
             </p>
           </div>
         </div>

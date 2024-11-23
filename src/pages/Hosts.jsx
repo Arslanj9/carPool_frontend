@@ -7,6 +7,7 @@ import HostDetails from '../components/HostDetails';
 const Hosts = () => {
 
   const [publishesData, setPublishesData] = useState([]);
+  const [loading, setLoading] = useState(true); 
   const [selectedHost, setSelectedHost] = useState(null);
 
 
@@ -14,6 +15,7 @@ const Hosts = () => {
   useEffect(() => {
     const fetchHostsData = async () => {
       try {
+        setLoading(true);
         const publishResponse = await axios.get('https://carpoolserver-backend.onrender.com/api/publish/getHost');
         const publishData = publishResponse.data;
 
@@ -22,14 +24,11 @@ const Hosts = () => {
         // Fetch user details and vehicles for each publish entry
         const hostDetailsPromises = publishData.map(async (publish) => {
 
-          console.log(`Inside Hosts, publish is: ${JSON.stringify(publish)}`)
-
           const userResponse = await axios.post('https://carpoolserver-backend.onrender.com/api/users/getUserData', {
             userId: publish.publisherId,
           });
           const userData = userResponse.data;
 
-          console.log(`Inside Hosts, User Data is: ${JSON.stringify(userData)}`)
 
 
           // Fetch vehicle details
@@ -66,11 +65,11 @@ const Hosts = () => {
 
         const publishesWithUserData = await Promise.all(hostDetailsPromises);
 
-        console.log(`Inside Hosts.jsx, publishedWithUSerData is: ${JSON.stringify(publishesWithUserData)}`)
-
         setPublishesData(publishesWithUserData);
       } catch (error) {
         console.error('Error fetching hosts data:', error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -78,7 +77,6 @@ const Hosts = () => {
   }, []);
 
 
-  console.log(`Inside Hosts.jsx, publishesData is: ${JSON.stringify(publishesData)}`)
 
 
 
@@ -90,7 +88,9 @@ const Hosts = () => {
     setSelectedHost(null); // Close the details view
   };
 
-  if (!publishesData) return <p className='text-center mt-20'>Loading...</p>;
+
+
+  if (loading) return <p className='text-center mt-20'>Loading...</p>;
 
   return (
     <div className="p-3 sm:p-6 max-w-lg mx-auto">

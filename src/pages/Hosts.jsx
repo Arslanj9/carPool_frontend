@@ -78,6 +78,8 @@ const Hosts = () => {
   }, []);
 
 
+  console.log(`Inside Hosts.jsx, publishesData is: ${JSON.stringify(publishesData)}`)
+
 
 
   const handleCardClick = (user) => {

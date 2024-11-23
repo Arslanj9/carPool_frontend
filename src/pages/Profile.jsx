@@ -11,7 +11,13 @@ const Profile = () => {
         <div className='px-4'>
             <div className="flex flex-col items-center p-6 mb-5 max-w-md mx-auto rounded-lg shadow-md space-y-6 overflow-hidden border border-gray-100 border-opacity-30">
                 <div className="flex space-x-4">
-                    <img className="w-16 h-16 rounded-full sm:w-24 sm:h-24 object-cover" src={`https://carpoolserver-backend.onrender.com${userData.profilePic}`} alt="profile pic" />
+                    <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-full overflow-hidden">
+                        <img
+                            className="w-full h-full object-cover"
+                            src={`https://carpoolserver-backend.onrender.com${userData.profilePic}`}
+                            alt="profile pic"
+                        />
+                    </div>
                     <div className="flex flex-col justify-center">
                         <h2 className="text-xl font-semibold">{userData.name}</h2>
                         <p className="text-yellow-500">⭐ {userData.rating} Rating</p>

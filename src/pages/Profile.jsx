@@ -8,7 +8,7 @@ const Profile = () => {
     if (!userData) return <p className='text-center mt-20'>Loading...</p>;
 
     return (
-        <div className='p-12'>
+        <div className='px-4'>
             <div className="flex flex-col items-center p-6 mb-5 max-w-md mx-auto rounded-lg shadow-md space-y-6 overflow-hidden border border-gray-100 border-opacity-30">
                 <div className="flex space-x-4">
                     <img className="w-16 h-16 rounded-full sm:w-24 sm:h-24" src={`https://carpoolserver-backend.onrender.com${userData.profilePic}`} alt="profile pic" />

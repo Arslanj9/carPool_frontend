@@ -95,7 +95,7 @@ function Publish() {
 
     <>
 
-      <div className="p-1">
+      <div className="p-3">
         <div className="w-full mb-3 shadow-md max-w-md mx-auto rounded-lg overflow-hidden border border-gray-100 border-opacity-30 bg-opacity-30 p-4">
           {userRole === 'host' ?
             <h1 className="text-center text-2xl mb-9 w-full">Publish a ride</h1> :

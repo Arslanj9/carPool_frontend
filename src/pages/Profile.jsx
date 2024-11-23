@@ -24,7 +24,7 @@ const Profile = () => {
                     <p className="text-gray-300">{userData.about}</p>
                 </div>
 
-                <div className="flex flex-col items-center space-y-3">
+                <div className="flex flex-col text-center items-center space-y-3">
                     <p className="text-gray-400"><strong>Current Role:</strong> {userData.userRole.toUpperCase()}</p>
                     <p className="text-gray-400"><strong>Contact Info:</strong> {userData.contactInfo}</p>
                     <p className="text-gray-400"><strong>Designation:</strong> {userData.designation}</p>

@@ -90,10 +90,7 @@ const Hosts = () => {
     setSelectedHost(null); // Close the details view
   };
 
-
-
-
-
+  if (!publishesData) return <p className='text-center mt-20'>Loading...</p>;
 
   return (
     <div className="p-3 sm:p-6 max-w-lg mx-auto">

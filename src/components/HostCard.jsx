@@ -49,7 +49,7 @@ const HostCard = ({
               <span className="ml-1 text-sky-600">{toLocation}</span>
             </h1>
             <p className="text-base">
-              {departureTime} <span className="text-[0.6rem] text-gray-500 pl-1">{departureDate}</span>
+              {departureTime} <span className="text-sm text-gray-500 pl-1">{departureDate}</span>
             </p>
           </div>
         </div>

@@ -86,7 +86,7 @@ const Hosts = () => {
 
 
   return (
-    <div className="p-1 sm:p-6 max-w-lg mx-auto">
+    <div className="p-2 sm:p-6 max-w-lg mx-auto">
       
       {selectedHost ? (
         <HostDetails user={selectedHost} onClose={handleCloseDetails} />
